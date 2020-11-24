@@ -1,5 +1,7 @@
 package com.kotlin.demo
 
+import com.kotlin.demo.util.Calculator
+
 // criar tipo de dado
 typealias Handler = (String) -> Unit
 
@@ -26,17 +28,17 @@ fun somar(a: Int, b: Int): Int {
 fun subtrair(a: Int, b: Int): Int = a - b
 
 fun main() {
-    println("Ola Kotlin developers!")
-    ola()
+    val c1 = Contact(
+        phone = "119876234652",
+        id = "abc123",
+        email = "abdoral.gusmao@gmail.com",
+        name = "Abdoral Gusmao",
+    )
 
-    ola = { println("Ola Kotliners 2!") }
-    ola()
-    
-    val result = somar(5, 5)
-    println("Resultado 5 + 5 = $result")
+    println("$c1")
 
-    val result2 = subtrair(10, 3)
-    println("Resultado 10 - 3 = $result2")
+    println("Div: 10 / 2 = ${Calculator.execute(com.kotlin.demo.sample.Calculator.DIV, 10, 2)}")
+    println("Sub: 10 - 3 = ${Calculator.sub(10, 3)}")
+    println("Mult: 2 * 4 = ${Calculator.mult(2, 4)}")
 
-    greet2("Bruno")
 }
